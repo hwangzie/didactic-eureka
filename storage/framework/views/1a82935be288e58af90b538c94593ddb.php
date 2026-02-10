@@ -1,0 +1,182 @@
+<style>
+/* ===================================
+   Pixel Office Community Stats
+   =================================== */
+
+.community-section {
+    background: linear-gradient(180deg, #16213e 0%, #1a1a2e 100%);
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: #ffd700;
+    text-shadow: 3px 3px 0px #b8860b;
+    margin-bottom: 10px;
+}
+
+.visitor-counter {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid #00ff88;
+    display: inline-block;
+}
+
+/* Office Container */
+.office-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.office-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16/10;
+    background: #3d3d5c;
+    border: 8px solid #2d2d44;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 
+        0 0 0 4px #1a1a2e,
+        0 20px 60px rgba(0,0,0,0.5),
+        inset 0 0 100px rgba(255,255,255,0.05);
+}
+
+.office-floor {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(90deg, #c9a66b 0px, #c9a66b 40px, #d4b07a 40px, #d4b07a 80px);
+    background-size: 80px 80px;
+}
+
+.office-wall {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 80px;
+    background: linear-gradient(180deg, #5a5a8a 0%, #4a4a7a 100%);
+    border-bottom: 4px solid #3d3d5c;
+}
+
+.office-wall::before {
+    content: '';
+    position: absolute;
+    top: 20px; left: 50px; right: 50px;
+    height: 40px;
+    background: linear-gradient(180deg, #87ceeb 0%, #add8e6 100%);
+    border: 3px solid #2d2d44;
+}
+
+.furniture { position: absolute; image-rendering: pixelated; }
+
+.desk {
+    width: 120px; height: 60px;
+    background: linear-gradient(180deg, #8b7355 0%, #6b5344 100%);
+    border: 3px solid #4a3728;
+    border-radius: 4px;
+}
+
+.desk::before {
+    content: '';
+    position: absolute;
+    top: 5px; left: 10px;
+    width: 40px; height: 30px;
+    background: #333;
+    border: 2px solid #222;
+    border-radius: 2px;
+}
+
+.desk::after {
+    content: '';
+    position: absolute;
+    top: 8px; left: 13px;
+    width: 34px; height: 20px;
+    background: linear-gradient(180deg, #4a9eff 0%, #2d7dd2 100%);
+    border-radius: 1px;
+}
+
+.plant { width: 40px; height: 60px; }
+
+.plant::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 25px; height: 20px;
+    background: #8b4513;
+    border-radius: 4px;
+}
+
+.plant::after {
+    content: '';
+    position: absolute;
+    bottom: 15px; left: 50%;
+    transform: translateX(-50%);
+    width: 35px; height: 45px;
+    background: radial-gradient(ellipse, #228b22 0%, #006400 100%);
+    border-radius: 50% 50% 40% 40%;
+}
+
+.characters-container {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+}
+
+.pixel-character {
+    position: absolute;
+    width: 32px; height: 48px;
+    image-rendering: pixelated;
+    transition: left 0.8s linear, top 0.8s linear;
+}
+
+.pixel-character.walking { animation: characterWalk 0.4s steps(2) infinite; }
+.pixel-character.facing-left .character-sprite { transform: scaleX(-1); }
+
+@keyframes characterWalk {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-2px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-2px); }
+}
+
+.stats-panel {
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid #ffd700;
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.stat-icon { font-size: 2rem; margin-right: 15px; }
+.stat-value { font-family: 'Press Start 2P', cursive; font-size: 1.2rem; color: #00ff88; }
+.stat-label { font-size: 0.9rem; color: #aaa; }
+
+@media (max-width: 768px) {
+    .section-title { font-size: 1rem; }
+    .office-container { aspect-ratio: 4/3; }
+    .pixel-character { width: 24px; height: 36px; }
+}
+</style><?php /**PATH F:\laragon\www\community-stats\resources\views/components/pixel-office/styles.blade.php ENDPATH**/ ?>
