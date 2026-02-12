@@ -136,14 +136,18 @@ class PixelOffice {
         const base = this.characterBasePath;
         
         // Define your character part variations
-        const heads = ['Temp-head.gif', 'head-1.gif', 'head-2.gif', 'head-3.gif', 'head-4.gif'];
-        const bodies = ['body-1.gif', 'body-2.gif', 'body-3.gif'];
-        const feet = ['foot-1.gif', 'foot-2.gif'];
-        
+        const headCount = 104;   // e.g., head-1.gif to head-20.gif
+        const bodyCount = 12;   // e.g., body-1.gif to body-10.gif
+        const footCount = 5;    // e.g., foot-1.gif to foot-5.gif
+
         // Randomly select each part
-        const head = heads[Math.floor(this.random() * heads.length)];
-        const body = bodies[Math.floor(this.random() * bodies.length)];
-        const foot = feet[Math.floor(this.random() * feet.length)];
+        const headNum = Math.floor(this.random() * headCount) + 1;
+        const bodyNum = Math.floor(this.random() * bodyCount) + 1;
+        const footNum = Math.floor(this.random() * footCount) + 1;
+
+        const head = `head-${headNum}.gif`;
+        const body = `body-${bodyNum}.gif`;
+        const foot = `foot-${footNum}.gif`;
         
         return `<div class="character-sprite" style="position:relative;width:150%;height:150%">
             <img src="${base}/${foot}" style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%;image-rendering:pixelated">
