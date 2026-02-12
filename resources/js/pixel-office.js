@@ -137,8 +137,8 @@ class PixelOffice {
         
         // Define your character part variations
         const heads = ['Temp-head.gif', 'head-1.gif', 'head-2.gif', 'head-3.gif', 'head-4.gif'];
-        const bodies = ['Temp-body.gif', 'body-1.gif', 'body-2.gif', 'body-3.gif'];
-        const feet = ['Temp-foot.gif', 'foot-1.gif', 'foot-2.gif'];
+        const bodies = ['body-1.gif', 'body-2.gif', 'body-3.gif'];
+        const feet = ['foot-1.gif', 'foot-2.gif'];
         
         // Randomly select each part
         const head = heads[Math.floor(this.random() * heads.length)];
