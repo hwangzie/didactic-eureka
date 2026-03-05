@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    $visitorCount = cache()->get('total_visitors', 1);
+    $visitorCount = cache()->get('total_visitors', 500);
     
     return view('landing', compact('visitorCount'));
 });

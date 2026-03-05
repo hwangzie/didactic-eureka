@@ -41,11 +41,13 @@ unset($__defined_vars, $__key, $__value); ?>
         <div class="row justify-content-center align-items-start g-4">
             <div class="col-lg-8">
                 <div class="office-wrapper">
-                    <div class="office-container" id="officeContainer">
-                        <div class="office-floor"></div>
-                        <div class="office-wall"></div>
-                        <div class="furniture-container" id="furnitureContainer"></div>
-                        <div class="characters-container" id="charactersContainer"></div>
+                    <div class="office-scaler" id="officeScaler">
+                        <div class="office-container" id="officeContainer">
+                            <div class="office-floor"></div>
+                            <div class="office-wall"></div>
+                            <a href="https://www.google.com"><div class="furniture-container" id="furnitureContainer"></div></a>
+                            <div class="characters-container" id="charactersContainer"></div>
+                        </div>
                     </div>
                 </div>
             </div>
